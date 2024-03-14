@@ -6,6 +6,7 @@ class Dados(models.Model):
     liga_robo = models.BooleanField(default=False)
     reset_contador = models.BooleanField(default=False)
     valor_contagem = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"ID: {self.id}, Sensor: {self.sensor}, Botao: {self.botao}, LigaRobo: {self.liga_robo}, ResetContador: {self.reset_contador}, ValorContagem: {self.valor_contagem}"
+        return f"Dados {self.id}"
